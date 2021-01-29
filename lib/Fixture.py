@@ -18,7 +18,7 @@ class Factory():
         def __init__(self,
                      parent: object,
                      child: object):
-            self.model = "juntagrico.member"
+            self.model = parent.model
             self.pk = len(parent.list) + parent.offset
             self.fields = child
 
