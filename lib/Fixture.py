@@ -29,9 +29,6 @@ class Factory():
         self.list.append(
             self.FixtureEntry(self, child))
 
-    def encode(self):
-        return self.__dict__
-
     def len(self):
         return len(self.list) + self.offset
 
