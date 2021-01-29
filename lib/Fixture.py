@@ -5,7 +5,9 @@ from json import dumps
 @dataclass
 class Factory():
 
-    def __init__(self, model, offset=0):
+    def __init__(self,
+                 model: str,
+                 offset: int=0):
         self.list = []
         self.model = model
         self.offset = offset
@@ -13,7 +15,9 @@ class Factory():
     @dataclass
     class FixtureEntry():
 
-        def __init__(self, parent, child):
+        def __init__(self,
+                     parent: object,
+                     child: object):
             self.model = "juntagrico.member"
             self.pk = len(parent.list) + parent.offset
             self.fields = child
